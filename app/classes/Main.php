@@ -1,17 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex_uprise
- * Date: 14.11.18
- * Time: 17:03
- */
-
 namespace Application;
-
 
 class Main
 {
-    /** @var null|self $instance */
+    /** @var null|self $instance Экземпляр приложения */
     protected static $instance;
 
     public static function getInstance(): self
@@ -19,13 +11,18 @@ class Main
         if (!isset(static::$instance)) {
             static::$instance = new static();
         }
+
+        return static::$instance;
     }
 
     /**
+     * Точка входа в приложение
+     *
      * @param string $route Маршрут обработки запроса
+     * @throws Exception\ConfigNotFoundException
      */
     public function run(string $route = 'index')
     {
-        echo 'foo';
+        echo Config::get('foo');
     }
 }
