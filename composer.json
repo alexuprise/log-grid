@@ -1,0 +1,12 @@
+{
+  "autoload": {
+    "psr-4": {
+      "Application\\": "app/classes"
+    }
+  },
+
+  "require": {
+    "php": ">=7.0.0",
+    "ext-json": "*"
+  }
+}
