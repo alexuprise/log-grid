@@ -14,13 +14,18 @@ apt-get install -y php7.0-fpm
 
 a2enmod php7.0
 
+service php7.0-fpm stop
 service apache2 stop
+
+ls -la /var/www
+ls -la /var/www/html
 
 rm -rf /var/www/html
 
 git clone https://github.com/alexuprise/log-grid.git /var/www/html
 
 service apache2 start
+service php7.0-fpm start
 
 cd /var/www/html
 
