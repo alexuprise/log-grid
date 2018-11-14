@@ -10,7 +10,7 @@ use Application\Exception\ConfigNotFoundException;
 class Config
 {
     /** @var string CONFIG_PATH Относительное расположение файла настроек */
-    const CONFIG_PATH = __DIR__ . '../config.json';
+    const CONFIG_PATH = __DIR__ . '/../config.json';
 
     /** @var null|array $config Объект с настройками */
     protected static $config;
