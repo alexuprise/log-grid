@@ -10,7 +10,7 @@ use Application\Exception\ConfigNotFoundException;
 class Config
 {
     /** @var string CONFIG_PATH Относительное расположение файла настроек */
-    const CONFIG_PATH = __DIR__ . '/../config.json';
+    const CONFIG_RELATIVE_PATH = __DIR__ . '/../config.json';
 
     /** @var null|array $config Объект с настройками */
     protected static $config;
@@ -31,14 +31,22 @@ class Config
     }
 
     /**
+     * @return bool|string
+     */
+    public static function getConfigPath()
+    {
+        return realpath(static::CONFIG_RELATIVE_PATH);
+    }
+
+    /**
      * Метод, загружающий настройки из файла
      */
     protected static function loadConfig()
     {
-        if (!file_exists(static::CONFIG_PATH)) {
+        if (!static::getConfigPath()) {
             throw new ConfigNotFoundException;
         }
 
-        static::$config = json_decode(static::CONFIG_PATH, true);
+        static::$config = json_decode(file_get_contents(static::getConfigPath()), true);
     }
 }

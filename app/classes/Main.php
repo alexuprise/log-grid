@@ -6,23 +6,20 @@ class Main
     /** @var null|self $instance Экземпляр приложения */
     protected static $instance;
 
+    /**
+     * @return Main
+     */
     public static function getInstance(): self
     {
         if (!isset(static::$instance)) {
-            static::$instance = new static();
+            static::$instance = (new static())->init();
         }
 
         return static::$instance;
     }
 
-    /**
-     * Точка входа в приложение
-     *
-     * @param string $route Маршрут обработки запроса
-     * @throws Exception\ConfigNotFoundException
-     */
-    public function run(string $route = 'index')
+    protected function init(): self
     {
-        echo Config::get('foo');
+        return $this;
     }
 }
