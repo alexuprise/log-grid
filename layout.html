@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Log Viewer</title>
+    <title>Просмотр доступов</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -22,7 +22,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1>Log Viewer</h1>
+                <h1>Просмотр доступов</h1>
                 <hr>
             </div>
         </div>
@@ -33,25 +33,29 @@
                     <input type="text" class="form-control" id="ip-filter-input" placeholder="127.0.0.1">
                 </div>
             </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="" style="color: white;">0</label>
+                    <input class="form-control" type="button" value="Применить фильтр">
+                </div>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-10">
                 <div class="form-group">
-                    <label></label>
+                    <label for=""></label>
                     <nav>
                         <ul class="pagination">
-                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
                             <li class="page-item"><a class="page-link" href="#">2</a></li>
                             <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
             <div class="col-md-2">
                 <div class="form-group">
-                    <label for="pagination-limit-select"></label>
+                    <label for=""></label>
                     <select class="form-control" name="" id="pagination-limit-select">
                         <option value="10">10</option>
                         <option value="25">25</option>
@@ -62,16 +66,40 @@
             </div>
         </div>
         <div class="row">
+            <div class="col">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>IP-адрес</th>
+                            <th>Браузер</th>
+                            <th>OS</th>
+                            <th>Первый URL</th>
+                            <th>Последний URL</th>
+                            <th>Уник. просмотров</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-md-10">
                 <div class="form-group">
                     <label></label>
                     <nav>
                         <ul class="pagination">
-                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
                             <li class="page-item"><a class="page-link" href="#">1</a></li>
                             <li class="page-item"><a class="page-link" href="#">2</a></li>
                             <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
                         </ul>
                     </nav>
                 </div>

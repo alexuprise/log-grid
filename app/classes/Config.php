@@ -1,7 +1,7 @@
 <?php
 namespace Application;
 
-use Application\Exception\ConfigNotFoundException;
+use Application\Exceptions\ConfigNotFoundException;
 
 /**
  * Класс, отвечающий за доступ к глобальным настройкам приложения
@@ -40,6 +40,7 @@ class Config
 
     /**
      * Метод, загружающий настройки из файла
+     * @throws ConfigNotFoundException
      */
     protected static function loadConfig()
     {

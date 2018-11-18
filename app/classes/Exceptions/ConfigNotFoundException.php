@@ -1,5 +1,5 @@
 <?php
-namespace Application\Exception;
+namespace Application\Exceptions;
 
 
 class ConfigNotFoundException extends \Exception
